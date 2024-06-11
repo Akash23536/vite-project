@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 function App() {
-  let color = "Blue";
+  const [color, setColor] = useState("Red");
 
   const changeColor = () => {
-    color = "Black";
-    console.log(color);
+    setColor("Black");
   };
   return (
     <>
