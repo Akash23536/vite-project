@@ -8,14 +8,15 @@ function App() {
   });
 
   const changeColor = () => {
-    setFact({
-      number: "0001",
+    setFact((e) => {
+      return { ...e, number: 100 };
     });
   };
   return (
     <>
       <h1>
-        My fav Color :{fact.color} and my Fav No : {fact.number} and Fruit :{fact.fruit}
+        My fav Color :{fact.color} and my Fav No : {fact.number} and Fruit :
+        {fact.fruit}
       </h1>
       <button onClick={changeColor}>change</button>
     </>
